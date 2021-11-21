@@ -1,0 +1,115 @@
+.smodal.open .modal_back, .smodal.open .modal_window {
+    opacity: 1;
+    z-index: 1000;
+}
+
+.smodal.hide .modal_back, .smodal.hide .modal_window {
+    opacity: 1;
+    z-index: 1000;
+}
+
+.smodal.open .modal_window{
+    transform: translateY(200px);
+}
+.smodal.open .modal_back{
+    background: rgb(0,0,0,0.5);
+}
+
+.smodal.hide .modal_window{
+    transform: translateY(-200px);
+}
+.smodal.hide .modal_back{
+    background: rgb(0,0,0,0);
+}
+
+.modal_window, .modal_back{
+    opacity: 0;
+    z-index: -1;
+}
+
+.modal_back{
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left:0;
+    right: 0;
+    background: rgba(0,0,0,0);
+    transition: background .4s ease-in;
+}
+.modal_window{
+    font-family: Work Sans;
+    max-width: 600px;
+    border-radius: 15px;
+    background: #303030;
+    margin: 0 auto;
+    transform: translateY(-200px);
+    transition: transform .4s ease-in;
+}
+.modal-header{
+    padding: 15px 10px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #000;
+}
+.modal-title{
+    font-size:  1.5rem;
+    color: rgb(173,173,173);
+    font-weight: bold;
+}
+.modal-close{
+    font-size: 24px;
+    cursor: pointer;
+    color: rgb(173,173,173);
+}
+.modal-body{
+    padding: 10px;
+    color: rgb(173,173,173);
+    font-size:  1.3rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.modal-body p{
+    margin-bottom: 5px;
+}
+.modal-body a{
+    margin-left: 2px;
+}
+.modal-body a:hover{
+    color: rgb(173,173,173);
+}
+.modal-footer{
+    padding: 10px;
+    border-top: 1px solid #000;
+    display: flex;
+    justify-content: flex-end;
+}
+button{
+    font-size: 16px;
+    font-weight: bold;
+    background: rgb(31, 30, 30);
+    padding: 5px;
+    border: 0;
+    margin-right:10px;
+    color: rgb(173,173,173);
+    border-radius: 5px;
+}
+button:hover{
+    color:rgb(31, 30, 30);
+    background:rgb(173,173,173);
+}
+
+@media (max-width: 900px){
+    .modal-body{
+        justify-content:baseline;
+        flex-direction: column;
+    }
+    .modal-body a{
+        font-size: 16px;
+    }
+    .modal-window{
+    width: 100%;
+    }
+}
